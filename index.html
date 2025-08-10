@@ -1,0 +1,51 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora 50/30/20</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Orçamento 50/30/20</h1>
+        <p class="description">
+            A regra 50/30/20 é um método simples para gerenciar seu dinheiro. Ela divide sua renda líquida em três categorias de gastos: 50% para necessidades, 30% para desejos e 20% para poupança e pagamento de dívidas.
+        </p>
+        <div class="calculator">
+            <label for="income">Sua Renda Mensal Líquida (R$)</label>
+            <input type="number" id="income" placeholder="Ex: 3000" min="0">
+            <button id="calculate-btn">Calcular</button>
+        </div>
+        <div id="results" class="results-container hidden">
+            <div class="result-card needs">
+                <img src="needs_icon.png" alt="Ícone de Necessidades" class="icon">
+                <h3>50% Necessidades</h3>
+                <p id="needs-amount" class="amount">R$ 0,00</p>
+                <p class="category-description">Moradia, contas, comida, transporte.</p>
+            </div>
+            <div class="result-card wants">
+                 <img src="wants_icon.png" alt="Ícone de Desejos" class="icon">
+                <h3>30% Desejos</h3>
+                <p id="wants-amount" class="amount">R$ 0,00</p>
+                <p class="category-description">Lazer, hobbies, jantares fora, compras.</p>
+            </div>
+            <div class="result-card savings">
+                 <img src="savings_icon.png" alt="Ícone de Poupança" class="icon">
+                <h3>20% Poupança e Dívidas</h3>
+                <p id="savings-amount" class="amount">R$ 0,00</p>
+                <p class="category-description">Fundo de emergência, investimentos, quitar dívidas.</p>
+            </div>
+            <div class="total-card">
+                <h3>Total Distribuído</h3>
+                <p id="total-amount" class="amount">R$ 0,00</p>
+                <p class="category-description">Soma das categorias.</p>
+            </div>
+        </div>
+        <div id="error-message" class="error hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
